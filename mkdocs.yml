@@ -1,0 +1,103 @@
+site_name: BMEVIAUAB00 Szoftvertechnikák
+site_author: Benedek Zoltán
+copyright: Copyright &copy; BME VIK AUT
+repo_name: bmeviauab00/szoftvertechnikak
+repo_url: https://github.com/bmeviauab00/szoftvertechnikak
+
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
+  language: hu
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: aut
+      primary: aut
+      accent: red
+      toggle:
+        icon: material/lightbulb-outline
+        name: Váltás sötét témára
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      toggle:
+        icon: material/lightbulb
+        name: Váltás világos témára
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.top
+    - search.suggest
+    - content.action.edit
+  logo: img/logo-bme-aut.png
+  favicon: img/favicon.ico
+
+extra_css:
+  - extra-material-theme.css
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.keys
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: timeago
+      timezone: Europe/Budapest
+      locale: hu
+  - git-committers:
+      repository: bmeviauab00/szoftvertechnikak
+      branch: main
+
+nav:
+  - index.md
+  - "Laborok":
+      - labor/1-model-es-kod-kapcsolata/index.md
+      - labor/2-nyelvi-eszkozok/index.md
+      - labor/3-felhasznaloi-felulet/index.md
+      - labor/4-tobbszalu/index.md
+      - labor/5-adatkezeles/index.md
+      - labor/6-doc-view/index.md
+      - labor/7-tervezesi-mintak/index.md      
+  - "Önálló/házi feladatok":
+      - 'Útmutató': hazi/index.md
+      - '1. HF - A modell és a kód kapcsolata': hazi/1-model-es-kod-kapcsolata/index.md
+      - '2. HF - Nyelvi eszközök': hazi/2-nyelvi-eszkozok/index.md
+      - '3. HF - Felhasználói felület kialakítása': hazi/3-felhasznaloi-felulet-kialakitasa/index.md
+      - '4. HF - Többszálú alkalmazások fejlesztése': hazi/4-tobbszalu-alkalmazasok-fejlesztese/index.md
+      - '5. HF - Document-View architektúra': hazi/meghirdetes-elott.md
+      - 'Fejlesztőkörnyezet': hazi/fejlesztokornyezet/index.md
